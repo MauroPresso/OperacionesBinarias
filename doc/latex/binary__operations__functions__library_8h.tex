@@ -1,0 +1,375 @@
+\doxysection{binary\+\_\+operations\+\_\+functions\+\_\+library.\+h File Reference}
+\hypertarget{binary__operations__functions__library_8h}{}\label{binary__operations__functions__library_8h}\index{binary\_operations\_functions\_library.h@{binary\_operations\_functions\_library.h}}
+
+
+Declaraciones de funciones para manipulación de datos a nivel de bits (de 32 y 64 bits).  
+
+
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{binary__operations__functions__library_8h_a58d7014fd0eacd38d6202fea6beaa6bb}{show\+\_\+bin32}} (uint32\+\_\+t value)
+\begin{DoxyCompactList}\small\item\em Muestra la representación binaria de un valor de 32 bits. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{binary__operations__functions__library_8h_ad8393909f1b8a0068ae54315d533bf62}{show\+\_\+bin64}} (uint64\+\_\+t value)
+\begin{DoxyCompactList}\small\item\em Muestra la representación binaria de un valor de 64 bits. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{binary__operations__functions__library_8h_ab7c35797061da898dadc1bd3eac8bfba}{set\+\_\+bit32}} (uint32\+\_\+t data, uint8\+\_\+t bit\+\_\+pos, bool bit\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Establece un bit específico en un valor de 32 bits. \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{binary__operations__functions__library_8h_a0c6e61c1ce996bc8a510402d4b9bbf7a}{set\+\_\+bit64}} (uint64\+\_\+t data, uint8\+\_\+t bit\+\_\+pos, bool bit\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Establece un bit específico en un valor de 64 bits. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{binary__operations__functions__library_8h_ac7cd67e8f6e4c205c75259197a8353f0}{toggle\+\_\+bit32}} (uint32\+\_\+t data, uint8\+\_\+t bit\+\_\+pos)
+\begin{DoxyCompactList}\small\item\em Invierte un bit específico en un valor de 32 bits. \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{binary__operations__functions__library_8h_aba63ed94bc5879eab2fadab72a2b30e8}{toggle\+\_\+bit64}} (uint64\+\_\+t data, uint8\+\_\+t bit\+\_\+pos)
+\begin{DoxyCompactList}\small\item\em Invierte un bit específico en un valor de 64 bits. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{binary__operations__functions__library_8h_a8c9de10dd1d6a44abce006c373f63cd1}{carry\+\_\+rotate32}} (uint32\+\_\+t data, int N)
+\begin{DoxyCompactList}\small\item\em Rota los bits de un valor de 32 bits con acarreo. \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{binary__operations__functions__library_8h_ad07e3d23a73eb0b6bf6de0de0d5928fd}{carry\+\_\+rotate64}} (uint64\+\_\+t data, int N)
+\begin{DoxyCompactList}\small\item\em Rota los bits de un valor de 64 bits con acarreo. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{binary__operations__functions__library_8h_a539edc924697be9adc28a12cafa14673}{extract\+\_\+bits\+\_\+segment32}} (uint32\+\_\+t value, uint8\+\_\+t start\+Bit, uint8\+\_\+t end\+Bit)
+\begin{DoxyCompactList}\small\item\em Extrae un segmento de bits de un valor de 32 bits. \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{binary__operations__functions__library_8h_a66a9485d771b97b72542a7f7f927b51d}{extract\+\_\+bits\+\_\+segment64}} (uint64\+\_\+t value, uint8\+\_\+t start\+Bit, uint8\+\_\+t end\+Bit)
+\begin{DoxyCompactList}\small\item\em Extrae un segmento de bits de un valor de 64 bits. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Declaraciones de funciones para manipulación de datos a nivel de bits (de 32 y 64 bits). 
+
+Este archivo contiene las declaraciones de funciones para manipular datos a nivel de bits (de 32 y 64 bits). 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{binary__operations__functions__library_8h_a8c9de10dd1d6a44abce006c373f63cd1}\label{binary__operations__functions__library_8h_a8c9de10dd1d6a44abce006c373f63cd1} 
+\index{binary\_operations\_functions\_library.h@{binary\_operations\_functions\_library.h}!carry\_rotate32@{carry\_rotate32}}
+\index{carry\_rotate32@{carry\_rotate32}!binary\_operations\_functions\_library.h@{binary\_operations\_functions\_library.h}}
+\doxysubsubsection{\texorpdfstring{carry\_rotate32()}{carry\_rotate32()}}
+{\footnotesize\ttfamily uint32\+\_\+t carry\+\_\+rotate32 (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{data,  }\item[{int}]{N }\end{DoxyParamCaption})}
+
+
+
+Rota los bits de un valor de 32 bits con acarreo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Valor original. \\
+\hline
+{\em N} & Número de posiciones a rotar (positivo\+: derecha, negativo\+: izquierda). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Valor rotado.
+\end{DoxyReturn}
+Rota los bits de un valor de 32 bits con acarreo.
+
+La función rota los bits hacia la izquierda o derecha, dependiendo del signo de N.
+\begin{DoxyItemize}
+\item N positivo\+: Rotación a la izquierda.
+\item N negativo\+: Rotación a la derecha.
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Valor original. \\
+\hline
+{\em N} & Cantidad de posiciones para rotar (-\/31 a 31). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Valor rotado. Si N está fuera del rango, retorna 0. 
+\end{DoxyReturn}
+\Hypertarget{binary__operations__functions__library_8h_ad07e3d23a73eb0b6bf6de0de0d5928fd}\label{binary__operations__functions__library_8h_ad07e3d23a73eb0b6bf6de0de0d5928fd} 
+\index{binary\_operations\_functions\_library.h@{binary\_operations\_functions\_library.h}!carry\_rotate64@{carry\_rotate64}}
+\index{carry\_rotate64@{carry\_rotate64}!binary\_operations\_functions\_library.h@{binary\_operations\_functions\_library.h}}
+\doxysubsubsection{\texorpdfstring{carry\_rotate64()}{carry\_rotate64()}}
+{\footnotesize\ttfamily uint64\+\_\+t carry\+\_\+rotate64 (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{data,  }\item[{int}]{N }\end{DoxyParamCaption})}
+
+
+
+Rota los bits de un valor de 64 bits con acarreo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Valor original. \\
+\hline
+{\em N} & Número de posiciones a rotar (positivo\+: derecha, negativo\+: izquierda). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Valor rotado.
+\end{DoxyReturn}
+Rota los bits de un valor de 64 bits con acarreo.
+
+La función rota los bits hacia la izquierda o derecha, dependiendo del signo de N.
+\begin{DoxyItemize}
+\item N positivo\+: Rotación a la izquierda.
+\item N negativo\+: Rotación a la derecha.
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Valor original. \\
+\hline
+{\em N} & Cantidad de posiciones para rotar (-\/63 a 63). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Valor rotado. Si N está fuera del rango, retorna 0. 
+\end{DoxyReturn}
+\Hypertarget{binary__operations__functions__library_8h_a539edc924697be9adc28a12cafa14673}\label{binary__operations__functions__library_8h_a539edc924697be9adc28a12cafa14673} 
+\index{binary\_operations\_functions\_library.h@{binary\_operations\_functions\_library.h}!extract\_bits\_segment32@{extract\_bits\_segment32}}
+\index{extract\_bits\_segment32@{extract\_bits\_segment32}!binary\_operations\_functions\_library.h@{binary\_operations\_functions\_library.h}}
+\doxysubsubsection{\texorpdfstring{extract\_bits\_segment32()}{extract\_bits\_segment32()}}
+{\footnotesize\ttfamily uint32\+\_\+t extract\+\_\+bits\+\_\+segment32 (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{value,  }\item[{uint8\+\_\+t}]{start\+Bit,  }\item[{uint8\+\_\+t}]{end\+Bit }\end{DoxyParamCaption})}
+
+
+
+Extrae un segmento de bits de un valor de 32 bits. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Valor original. \\
+\hline
+{\em start\+Bit} & Bit inicial del segmento (0-\/31). \\
+\hline
+{\em end\+Bit} & Bit final del segmento (0-\/31). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Segmento extraído como un valor de 32 bits.
+\end{DoxyReturn}
+Devuelve un segmento de bits definido por las posiciones start\+Bit y end\+Bit.
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Valor original. \\
+\hline
+{\em start\+Bit} & Posición inicial (0-\/31). \\
+\hline
+{\em end\+Bit} & Posición final (0-\/31). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Segmento de bits extraído. Si las posiciones son inválidas, retorna 0. 
+\end{DoxyReturn}
+\Hypertarget{binary__operations__functions__library_8h_a66a9485d771b97b72542a7f7f927b51d}\label{binary__operations__functions__library_8h_a66a9485d771b97b72542a7f7f927b51d} 
+\index{binary\_operations\_functions\_library.h@{binary\_operations\_functions\_library.h}!extract\_bits\_segment64@{extract\_bits\_segment64}}
+\index{extract\_bits\_segment64@{extract\_bits\_segment64}!binary\_operations\_functions\_library.h@{binary\_operations\_functions\_library.h}}
+\doxysubsubsection{\texorpdfstring{extract\_bits\_segment64()}{extract\_bits\_segment64()}}
+{\footnotesize\ttfamily uint64\+\_\+t extract\+\_\+bits\+\_\+segment64 (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{value,  }\item[{uint8\+\_\+t}]{start\+Bit,  }\item[{uint8\+\_\+t}]{end\+Bit }\end{DoxyParamCaption})}
+
+
+
+Extrae un segmento de bits de un valor de 64 bits. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Valor original. \\
+\hline
+{\em start\+Bit} & Bit inicial del segmento (0-\/63). \\
+\hline
+{\em end\+Bit} & Bit final del segmento (0-\/63). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Segmento extraído como un valor de 64 bits.
+\end{DoxyReturn}
+Devuelve un segmento de bits definido por las posiciones start\+Bit y end\+Bit.
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Valor original. \\
+\hline
+{\em start\+Bit} & Posición inicial (0-\/63). \\
+\hline
+{\em end\+Bit} & Posición final (0-\/63). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Segmento de bits extraído. Si las posiciones son inválidas, retorna 0. 
+\end{DoxyReturn}
+\Hypertarget{binary__operations__functions__library_8h_ab7c35797061da898dadc1bd3eac8bfba}\label{binary__operations__functions__library_8h_ab7c35797061da898dadc1bd3eac8bfba} 
+\index{binary\_operations\_functions\_library.h@{binary\_operations\_functions\_library.h}!set\_bit32@{set\_bit32}}
+\index{set\_bit32@{set\_bit32}!binary\_operations\_functions\_library.h@{binary\_operations\_functions\_library.h}}
+\doxysubsubsection{\texorpdfstring{set\_bit32()}{set\_bit32()}}
+{\footnotesize\ttfamily uint32\+\_\+t set\+\_\+bit32 (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{data,  }\item[{uint8\+\_\+t}]{bit\+\_\+pos,  }\item[{bool}]{bit\+\_\+value }\end{DoxyParamCaption})}
+
+
+
+Establece un bit específico en un valor de 32 bits. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Valor original. \\
+\hline
+{\em bit\+\_\+pos} & Posición del bit (0-\/31). \\
+\hline
+{\em bit\+\_\+value} & Valor del bit (true\+: 1, false\+: 0). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nuevo valor con el bit modificado.
+\end{DoxyReturn}
+Establece un bit específico en un valor de 32 bits.
+
+Establece el bit en la posición indicada como 1 o 0 dependiendo de bit\+\_\+value.
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Valor original. \\
+\hline
+{\em bit\+\_\+pos} & Posición del bit a modificar (0-\/31). \\
+\hline
+{\em bit\+\_\+value} & Valor booleano que indica el nuevo estado del bit (true\+: 1, false\+: 0). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Valor modificado con el bit ajustado. 
+\end{DoxyReturn}
+\Hypertarget{binary__operations__functions__library_8h_a0c6e61c1ce996bc8a510402d4b9bbf7a}\label{binary__operations__functions__library_8h_a0c6e61c1ce996bc8a510402d4b9bbf7a} 
+\index{binary\_operations\_functions\_library.h@{binary\_operations\_functions\_library.h}!set\_bit64@{set\_bit64}}
+\index{set\_bit64@{set\_bit64}!binary\_operations\_functions\_library.h@{binary\_operations\_functions\_library.h}}
+\doxysubsubsection{\texorpdfstring{set\_bit64()}{set\_bit64()}}
+{\footnotesize\ttfamily uint64\+\_\+t set\+\_\+bit64 (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{data,  }\item[{uint8\+\_\+t}]{bit\+\_\+pos,  }\item[{bool}]{bit\+\_\+value }\end{DoxyParamCaption})}
+
+
+
+Establece un bit específico en un valor de 64 bits. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Valor original. \\
+\hline
+{\em bit\+\_\+pos} & Posición del bit (0-\/63). \\
+\hline
+{\em bit\+\_\+value} & Valor del bit (true\+: 1, false\+: 0). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nuevo valor con el bit modificado.
+\end{DoxyReturn}
+Establece un bit específico en un valor de 64 bits.
+
+Establece el bit en la posición indicada como 1 o 0 dependiendo de bit\+\_\+value.
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Valor original. \\
+\hline
+{\em bit\+\_\+pos} & Posición del bit a modificar (0-\/63). \\
+\hline
+{\em bit\+\_\+value} & Valor booleano que indica el nuevo estado del bit (true\+: 1, false\+: 0). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Valor modificado con el bit ajustado. 
+\end{DoxyReturn}
+\Hypertarget{binary__operations__functions__library_8h_a58d7014fd0eacd38d6202fea6beaa6bb}\label{binary__operations__functions__library_8h_a58d7014fd0eacd38d6202fea6beaa6bb} 
+\index{binary\_operations\_functions\_library.h@{binary\_operations\_functions\_library.h}!show\_bin32@{show\_bin32}}
+\index{show\_bin32@{show\_bin32}!binary\_operations\_functions\_library.h@{binary\_operations\_functions\_library.h}}
+\doxysubsubsection{\texorpdfstring{show\_bin32()}{show\_bin32()}}
+{\footnotesize\ttfamily void show\+\_\+bin32 (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{value }\end{DoxyParamCaption})}
+
+
+
+Muestra la representación binaria de un valor de 32 bits. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Valor de 32 bits a mostrar.\\
+\hline
+\end{DoxyParams}
+Formatea la salida con espacios cada 4 bits y un separador adicional cada 8 bits.
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Valor de 32 bits a mostrar. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{binary__operations__functions__library_8h_ad8393909f1b8a0068ae54315d533bf62}\label{binary__operations__functions__library_8h_ad8393909f1b8a0068ae54315d533bf62} 
+\index{binary\_operations\_functions\_library.h@{binary\_operations\_functions\_library.h}!show\_bin64@{show\_bin64}}
+\index{show\_bin64@{show\_bin64}!binary\_operations\_functions\_library.h@{binary\_operations\_functions\_library.h}}
+\doxysubsubsection{\texorpdfstring{show\_bin64()}{show\_bin64()}}
+{\footnotesize\ttfamily void show\+\_\+bin64 (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{value }\end{DoxyParamCaption})}
+
+
+
+Muestra la representación binaria de un valor de 64 bits. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Valor de 64 bits a mostrar.\\
+\hline
+\end{DoxyParams}
+Formatea la salida con espacios cada 4 bits y un separador adicional cada 8 bits.
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Valor de 64 bits a mostrar. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{binary__operations__functions__library_8h_ac7cd67e8f6e4c205c75259197a8353f0}\label{binary__operations__functions__library_8h_ac7cd67e8f6e4c205c75259197a8353f0} 
+\index{binary\_operations\_functions\_library.h@{binary\_operations\_functions\_library.h}!toggle\_bit32@{toggle\_bit32}}
+\index{toggle\_bit32@{toggle\_bit32}!binary\_operations\_functions\_library.h@{binary\_operations\_functions\_library.h}}
+\doxysubsubsection{\texorpdfstring{toggle\_bit32()}{toggle\_bit32()}}
+{\footnotesize\ttfamily uint32\+\_\+t toggle\+\_\+bit32 (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{data,  }\item[{uint8\+\_\+t}]{bit\+\_\+pos }\end{DoxyParamCaption})}
+
+
+
+Invierte un bit específico en un valor de 32 bits. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Valor original. \\
+\hline
+{\em bit\+\_\+pos} & Posición del bit (0-\/31). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nuevo valor con el bit invertido.
+\end{DoxyReturn}
+Invierte un bit específico en un valor de 32 bits.
+
+Cambia un bit de 0 a 1 o de 1 a 0 en la posición indicada.
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Valor original. \\
+\hline
+{\em bit\+\_\+pos} & Posición del bit a invertir (0-\/31). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Valor modificado con el bit invertido. 
+\end{DoxyReturn}
+\Hypertarget{binary__operations__functions__library_8h_aba63ed94bc5879eab2fadab72a2b30e8}\label{binary__operations__functions__library_8h_aba63ed94bc5879eab2fadab72a2b30e8} 
+\index{binary\_operations\_functions\_library.h@{binary\_operations\_functions\_library.h}!toggle\_bit64@{toggle\_bit64}}
+\index{toggle\_bit64@{toggle\_bit64}!binary\_operations\_functions\_library.h@{binary\_operations\_functions\_library.h}}
+\doxysubsubsection{\texorpdfstring{toggle\_bit64()}{toggle\_bit64()}}
+{\footnotesize\ttfamily uint64\+\_\+t toggle\+\_\+bit64 (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{data,  }\item[{uint8\+\_\+t}]{bit\+\_\+pos }\end{DoxyParamCaption})}
+
+
+
+Invierte un bit específico en un valor de 64 bits. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Valor original. \\
+\hline
+{\em bit\+\_\+pos} & Posición del bit (0-\/63). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nuevo valor con el bit invertido.
+\end{DoxyReturn}
+Invierte un bit específico en un valor de 64 bits.
+
+Cambia un bit de 0 a 1 o de 1 a 0 en la posición indicada.
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Valor original. \\
+\hline
+{\em bit\+\_\+pos} & Posición del bit a invertir (0-\/63). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Valor modificado con el bit invertido. 
+\end{DoxyReturn}

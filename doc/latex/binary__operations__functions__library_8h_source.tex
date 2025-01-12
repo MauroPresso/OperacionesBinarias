@@ -1,0 +1,48 @@
+\doxysection{binary\+\_\+operations\+\_\+functions\+\_\+library.\+h}
+\hypertarget{binary__operations__functions__library_8h_source}{}\label{binary__operations__functions__library_8h_source}\mbox{\hyperlink{binary__operations__functions__library_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ SHOW\_BIN}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00020\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{binary__operations__functions__library_8h_a58d7014fd0eacd38d6202fea6beaa6bb}{show\_bin32}}(uint32\_t\ value);}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00027\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{binary__operations__functions__library_8h_ad8393909f1b8a0068ae54315d533bf62}{show\_bin64}}(uint64\_t\ value);}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{comment}{//\ SET\_BIT}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00040\ uint32\_t\ \mbox{\hyperlink{binary__operations__functions__library_8h_ab7c35797061da898dadc1bd3eac8bfba}{set\_bit32}}(uint32\_t\ data,\ uint8\_t\ bit\_pos,\ \textcolor{keywordtype}{bool}\ bit\_value);}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00050\ uint64\_t\ \mbox{\hyperlink{binary__operations__functions__library_8h_a0c6e61c1ce996bc8a510402d4b9bbf7a}{set\_bit64}}(uint64\_t\ data,\ uint8\_t\ bit\_pos,\ \textcolor{keywordtype}{bool}\ bit\_value);}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \textcolor{comment}{//\ TOGGLE\_BIT}}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00062\ uint32\_t\ \mbox{\hyperlink{binary__operations__functions__library_8h_ac7cd67e8f6e4c205c75259197a8353f0}{toggle\_bit32}}(uint32\_t\ data,\ uint8\_t\ bit\_pos);}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00071\ uint64\_t\ \mbox{\hyperlink{binary__operations__functions__library_8h_aba63ed94bc5879eab2fadab72a2b30e8}{toggle\_bit64}}(uint64\_t\ data,\ uint8\_t\ bit\_pos);}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \textcolor{comment}{//\ CARRY\_ROTATE}}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00083\ uint32\_t\ \mbox{\hyperlink{binary__operations__functions__library_8h_a8c9de10dd1d6a44abce006c373f63cd1}{carry\_rotate32}}(uint32\_t\ data,\ \textcolor{keywordtype}{int}\ N);}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00092\ uint64\_t\ \mbox{\hyperlink{binary__operations__functions__library_8h_ad07e3d23a73eb0b6bf6de0de0d5928fd}{carry\_rotate64}}(uint64\_t\ data,\ \textcolor{keywordtype}{int}\ N);}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00094\ \textcolor{comment}{//\ EXTRACT\_BITS\_SEGMENT}}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00104\ uint32\_t\ \mbox{\hyperlink{binary__operations__functions__library_8h_a539edc924697be9adc28a12cafa14673}{extract\_bits\_segment32}}(uint32\_t\ value,\ uint8\_t\ startBit,\ uint8\_t\ endBit);}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00114\ uint64\_t\ \mbox{\hyperlink{binary__operations__functions__library_8h_a66a9485d771b97b72542a7f7f927b51d}{extract\_bits\_segment64}}(uint64\_t\ value,\ uint8\_t\ startBit,\ uint8\_t\ endBit);}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00120\ }
+
+\end{DoxyCode}
