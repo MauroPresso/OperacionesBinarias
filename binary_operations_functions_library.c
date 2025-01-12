@@ -100,7 +100,7 @@ uint32_t set_bit32(uint32_t data, uint8_t bit_pos, bool bit_value)
 {
     if(bit_pos > 31)
     {
-        printf("La posicion del bit a SETear debe valer entre 0 y 31 (ambos incluidos)");
+        printf("\nLa posicion del bit a SETear debe valer entre 0 y 31 (ambos incluidos).\n");
         return 0;
     }
     uint32_t aux;
@@ -134,7 +134,7 @@ uint64_t set_bit64(uint64_t data, uint8_t bit_pos, bool bit_value)
 {
     if(bit_pos > 63)
     {
-        printf("La posicion del bit a SETear debe valer entre 0 y 63 (ambos incluidos)");
+        printf("\nLa posicion del bit a SETear debe valer entre 0 y 63 (ambos incluidos).\n");
         return 0;
     }
     uint64_t aux;
@@ -170,7 +170,7 @@ uint32_t toggle_bit32(uint32_t data, uint8_t bit_pos)
 {
     if(bit_pos > 31)
     {
-        printf("La posicion del bit a invertir debe valer entre 0 y 31 (ambos incluidos)");
+        printf("\nLa posicion del bit a invertir debe valer entre 0 y 31 (ambos incluidos).\n");
         return 0;
     }
     uint32_t aux;
@@ -195,7 +195,7 @@ uint64_t toggle_bit64(uint64_t data, uint8_t bit_pos)
 {
     if(bit_pos > 63)
     {
-        printf("La posicion del bit a invertir debe valer entre 0 y 63 (ambos incluidos)");
+        printf("\nLa posicion del bit a invertir debe valer entre 0 y 63 (ambos incluidos).\n");
         return 0;
     }
     uint64_t aux;
@@ -229,7 +229,7 @@ uint32_t carry_rotate32(uint32_t data, int N)
     uint32_t maskB;
     if(N < (-31) && N > 31)
     {
-        printf("Error: El valor de rotacion ingresado debe valer entre -31 y 31 (ambos incluidos).");
+        printf("\nError: El valor de rotacion ingresado debe valer entre -31 y 31 (ambos incluidos).\n");
         return 0;
     }
     if(N == 0)
@@ -286,7 +286,7 @@ uint64_t carry_rotate64(uint64_t data, int N)
     uint64_t maskB;
     if(N < (-63) && N > 63)
     {
-        printf("Error: El valor de rotacion ingresado debe valer entre -63 y 63 (ambos incluidos).");
+        printf("\nError: El valor de rotacion ingresado debe valer entre -63 y 63 (ambos incluidos).\n");
         return 0;
     }
     if(N == 0)
@@ -340,7 +340,7 @@ uint32_t extract_bits_segment32(uint32_t value, uint8_t startBit, uint8_t endBit
 {
     if(endBit > 31 || startBit > endBit)
     {
-        printf("\nError: Posiciones de bits invalidas\n");
+        printf("\nError: La posicion del bit del final no puede ser mayor a 31 \ny la posicion del bit del inicio no puede ser mayor a la posicion del bit del final.\n");
         return 0;
     }
     else
@@ -374,7 +374,7 @@ uint64_t extract_bits_segment64(uint64_t value, uint8_t startBit, uint8_t endBit
 {
     if(endBit > 63 || startBit > endBit)
     {
-        printf("\nError: Posiciones de bits invalidas\n");
+        printf("\nError: La posicion del bit del final no puede ser mayor a 63 \ny la posicion del bit del inicio no puede ser mayor a la posicion del bit del final.\n");
         return 0;
     }
     else
