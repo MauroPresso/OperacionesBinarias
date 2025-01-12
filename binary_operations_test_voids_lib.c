@@ -33,21 +33,21 @@ void testing_set_bit32(void)
     val = set_bit32(val, 3, true);
     printf("\nValor modificado con set_bit32 (true):\n");
     show_bin32(val);
-
+    printf("\n");
     val = 0;
     printf("\nValor == 0:\n");
     show_bin32(val);
     val = set_bit32(val, 3, true);
     printf("\nValor modificado con set_bit32 (true):\n");
     show_bin32(val);
-
+    printf("\n");
     val = 255;
     printf("\nValor == 255:\n");
     show_bin32(val); 
     val = set_bit32(val, 3, false);
     printf("\nValor modificado con set_bit32 (false):\n");
     show_bin32(val);
-
+    printf("\n");
     val = 0;
     printf("\nValor == 0:\n");
     show_bin32(val);
@@ -66,21 +66,21 @@ void testing_set_bit64(void)
     val = set_bit64(val, 3, true);
     printf("\nValor modificado con set_bit64 (true):\n");
     show_bin64(val);
-
+    printf("\n");
     val = 0;
     printf("\nValor == 0:\n");
     show_bin64(val);
     val = set_bit64(val, 3, true);
     printf("\nValor modificado con set_bit64 (true):\n");
     show_bin64(val);
-
+    printf("\n");
     val = 255;
     printf("\nValor == 255:\n");
     show_bin64(val); 
     val = set_bit64(val, 3, false);
     printf("\nValor modificado con set_bit64 (false):\n");
     show_bin64(val);
-
+    printf("\n");
     val = 0;
     printf("\nValor == 0:\n");
     show_bin64(val);
@@ -102,7 +102,7 @@ void testing_toggle_bit32(void)
     val = toggle_bit32(val, 3);
     printf("\nValor modificado con toggle_bit32:\n");
     show_bin32(val);
-
+    printf("\n");
     val = 0;
     printf("\nValor == 0:\n");
     show_bin32(val);
@@ -121,7 +121,7 @@ void testing_toggle_bit64(void)
     val = toggle_bit64(val, 3);
     printf("\nValor modificado con toggle_bit64:\n");
     show_bin64(val);
-
+    printf("\n");
     val = 0;
     printf("\nValor == 0:\n");
     show_bin64(val);
@@ -143,7 +143,7 @@ void testing_carry_rotate32(void)
     printf("\nValor rotado 4 veces a la IZQUIERDA:\n");
     val = carry_rotate32(val, 4);
     show_bin32(val);
-    
+    printf("\n");
     val = 255;
     printf("\nValor == 255:\n");
     show_bin32(val); 
@@ -162,7 +162,7 @@ void testing_carry_rotate64(void)
     printf("\nValor rotado 4 veces a la IZQUIERDA:\n");
     val = carry_rotate64(val, 4);
     show_bin64(val);
-    
+    printf("\n");
     val = 255;
     printf("\nValor == 255:\n");
     show_bin64(val); 
@@ -180,18 +180,19 @@ void testing_extract_bits_segment32(void)
     val = 247;
     printf("\nValor == 247:\n");
     show_bin32(val);
-    printf("\nSegmento extraído (bits 0-5):\n");
+    printf("\nSegmento extraido (bits 0-5):\n");
     val = extract_bits_segment32(val, 0, 5);
     show_bin32(val);
 }
 
 void testing_extract_bits_segment64(void)
 {    
+    printf("\nTESTING EXTRACT_BITS_SEGMENT64:\n");
     uint64_t val;
     val = 247;
     printf("\nValor == 247:\n");
     show_bin64(val);
-    printf("\nSegmento extraído (bits 0-5):\n");
+    printf("\nSegmento extraido (bits 0-5):\n");
     val = extract_bits_segment64(val, 0, 5);
     show_bin64(val);
 }    
