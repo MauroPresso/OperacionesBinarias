@@ -10,12 +10,6 @@
 #include <stdint.h>
 #include "binary_operations_functions_library.h"
 
-// SHOW_BIN
-
-void testing_show_bin32(void);
-
-void testing_show_bin64(void);
-
 
 // SET_BIT
 
