@@ -101,7 +101,7 @@ uint32_t set_bit32(uint32_t data, uint8_t bit_pos, bool bit_value)
     if(bit_pos > 31)
     {
         printf("\nLa posicion del bit a SETear debe valer entre 0 y 31 (ambos incluidos).\n");
-        return 0;
+        return data; // Retorna el dato sin tocarlo.
     }
     uint32_t aux;
     uint32_t mask = 1; // 0000 0000 - 0000 0000 - 0000 0000 - 0000 0001 // ~mask == 1111 1111 - 1111 1111 - 1111 1111 - 1111 1110
@@ -135,7 +135,7 @@ uint64_t set_bit64(uint64_t data, uint8_t bit_pos, bool bit_value)
     if(bit_pos > 63)
     {
         printf("\nLa posicion del bit a SETear debe valer entre 0 y 63 (ambos incluidos).\n");
-        return 0;
+        return data; // Retorna el dato sin tocarlo.
     }
     uint64_t aux;
     uint64_t mask = 1; // 0000 0000 - 0000 0000 - 0000 0000 - 0000 0001 // ~mask == 1111 1111 - 1111 1111 - 1111 1111 - 1111 1110
@@ -171,7 +171,7 @@ uint32_t toggle_bit32(uint32_t data, uint8_t bit_pos)
     if(bit_pos > 31)
     {
         printf("\nLa posicion del bit a invertir debe valer entre 0 y 31 (ambos incluidos).\n");
-        return 0;
+        return data; // Retorna el dato sin tocarlo.
     }
     uint32_t aux;
     uint32_t mask = 1; // 0000 0000 - 0000 0000 - 0000 0000 - 0000 0001
@@ -196,7 +196,7 @@ uint64_t toggle_bit64(uint64_t data, uint8_t bit_pos)
     if(bit_pos > 63)
     {
         printf("\nLa posicion del bit a invertir debe valer entre 0 y 63 (ambos incluidos).\n");
-        return 0;
+        return data; // Retorna el dato sin tocarlo.
     }
     uint64_t aux;
     uint64_t mask = 1; // 0000 0000 - 0000 0000 - 0000 0000 - 0000 0001
@@ -230,11 +230,12 @@ uint32_t carry_rotate32(uint32_t data, int N)
     if(N < (-31) && N > 31)
     {
         printf("\nError: El valor de rotacion ingresado debe valer entre -31 y 31 (ambos incluidos).\n");
-        return 0;
+        return data; // Retorna el dato sin tocarlo.
     }
     if(N == 0)
     {
-        return data; // No hay rotación necesaria.
+        printf("No hay rotación necesaria.\n");
+        return data; // Retorna el dato sin tocarlo.
     }
     if(N > (-31) && N < 0) // Rotacion a la DERECHA.
     {
@@ -287,11 +288,12 @@ uint64_t carry_rotate64(uint64_t data, int N)
     if(N < (-63) && N > 63)
     {
         printf("\nError: El valor de rotacion ingresado debe valer entre -63 y 63 (ambos incluidos).\n");
-        return 0;
+        return data; // Retorna el dato sin tocarlo.
     }
     if(N == 0)
     {
-        return data; // No hay rotación necesaria.
+        printf("No hay rotación necesaria.\n");
+        return data; // Retorna el dato sin tocarlo.
     }
     if(N > (-63) && N < 0) // Rotacion a la DERECHA.
     {
@@ -341,7 +343,7 @@ uint32_t extract_bits_segment32(uint32_t value, uint8_t startBit, uint8_t endBit
     if(endBit > 31 || startBit > endBit)
     {
         printf("\nError: La posicion del bit del final no puede ser mayor a 31 \ny la posicion del bit del inicio no puede ser mayor a la posicion del bit del final.\n");
-        return 0;
+        return value; // Retorna el valor original.
     }
     else
     {
@@ -375,7 +377,7 @@ uint64_t extract_bits_segment64(uint64_t value, uint8_t startBit, uint8_t endBit
     if(endBit > 63 || startBit > endBit)
     {
         printf("\nError: La posicion del bit del final no puede ser mayor a 63 \ny la posicion del bit del inicio no puede ser mayor a la posicion del bit del final.\n");
-        return 0;
+        return value; // Retorna el valor original.
     }
     else
     {
