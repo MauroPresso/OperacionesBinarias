@@ -1,0 +1,117 @@
+PS C:\Users\MAURO\Documents\BinaryOperations> .\binary_operations_main_program.exe     
+
+
+TESTING SET_BIT32:
+
+Valor == 255:
+0000 0000 - 0000 0000 - 0000 0000 - 1111 1111 
+Valor modificado con set_bit32 (true) en la posicion 3:
+0000 0000 - 0000 0000 - 0000 0000 - 1111 1111 
+
+Valor == 0:
+0000 0000 - 0000 0000 - 0000 0000 - 0000 0000
+Valor modificado con set_bit32 (true) en la posicion 3:
+0000 0000 - 0000 0000 - 0000 0000 - 0000 1000
+
+Valor == 255:
+0000 0000 - 0000 0000 - 0000 0000 - 1111 1111 
+Valor modificado con set_bit32 (false) en la posicion 3:
+0000 0000 - 0000 0000 - 0000 0000 - 1111 0111
+
+Valor == 0:
+0000 0000 - 0000 0000 - 0000 0000 - 0000 0000 
+Valor modificado con set_bit32 (false) en la posicion 3:
+0000 0000 - 0000 0000 - 0000 0000 - 0000 0000
+
+TESTING SET_BIT64:
+
+Valor == 255:
+0000 0000 - 0000 0000 - 0000 0000 - 0000 0000 - 0000 0000 - 0000 0000 - 0000 0000 - 1111 1111 
+Valor modificado con set_bit64 (true) en la posicion 3:
+0000 0000 - 0000 0000 - 0000 0000 - 0000 0000 - 0000 0000 - 0000 0000 - 0000 0000 - 1111 1111 
+
+Valor == 0:
+0000 0000 - 0000 0000 - 0000 0000 - 0000 0000 - 0000 0000 - 0000 0000 - 0000 0000 - 0000 0000 
+Valor modificado con set_bit64 (true) en la posicion 3:
+0000 0000 - 0000 0000 - 0000 0000 - 0000 0000 - 0000 0000 - 0000 0000 - 0000 0000 - 0000 1000 
+
+Valor == 255:
+0000 0000 - 0000 0000 - 0000 0000 - 0000 0000 - 0000 0000 - 0000 0000 - 0000 0000 - 1111 1111 
+Valor modificado con set_bit64 (false) en la posicion 3:
+0000 0000 - 0000 0000 - 0000 0000 - 0000 0000 - 0000 0000 - 0000 0000 - 0000 0000 - 1111 0111 
+
+Valor == 0:
+0000 0000 - 0000 0000 - 0000 0000 - 0000 0000 - 0000 0000 - 0000 0000 - 0000 0000 - 0000 0000
+Valor modificado con set_bit64 (false) en la posicion 3:
+0000 0000 - 0000 0000 - 0000 0000 - 0000 0000 - 0000 0000 - 0000 0000 - 0000 0000 - 0000 0000 
+
+
+
+TESTING TOGGLE_BIT32:
+
+Valor == 255:
+0000 0000 - 0000 0000 - 0000 0000 - 1111 1111 
+Valor modificado con toggle_bit32 en la posicion 3:
+0000 0000 - 0000 0000 - 0000 0000 - 1111 0111
+
+Valor == 0:
+0000 0000 - 0000 0000 - 0000 0000 - 0000 0000
+Valor modificado con toggle_bit32 en la posicion 3:
+0000 0000 - 0000 0000 - 0000 0000 - 0000 1000 
+
+TESTING TOGGLE_BIT64:
+
+Valor == 255:
+0000 0000 - 0000 0000 - 0000 0000 - 0000 0000 - 0000 0000 - 0000 0000 - 0000 0000 - 1111 1111 
+Valor modificado con toggle_bit64 en la posicion 3:
+0000 0000 - 0000 0000 - 0000 0000 - 0000 0000 - 0000 0000 - 0000 0000 - 0000 0000 - 1111 0111
+
+Valor == 0:
+0000 0000 - 0000 0000 - 0000 0000 - 0000 0000 - 0000 0000 - 0000 0000 - 0000 0000 - 0000 0000 
+Valor modificado con toggle_bit64 en la posicion 3:
+0000 0000 - 0000 0000 - 0000 0000 - 0000 0000 - 0000 0000 - 0000 0000 - 0000 0000 - 0000 1000
+
+
+
+TESTING CARRY_ROTATE32:
+
+Valor == 4278190080:
+1111 1111 - 0000 0000 - 0000 0000 - 0000 0000
+Valor rotado 4 veces (a la IZQUIERDA):
+1111 0000 - 0000 0000 - 0000 0000 - 0000 1111
+
+Valor == 255:
+0000 0000 - 0000 0000 - 0000 0000 - 1111 1111 
+Valor rotado -4 veces (a la DERECHA):
+1111 0000 - 0000 0000 - 0000 0000 - 0000 1111
+
+TESTING CARRY_ROTATE64:
+
+Valor == 4294967295:
+0111 1111 - 1111 1111 - 1111 1111 - 1111 1111 - 1111 1111 - 1111 1111 - 1111 1111 - 1111 1111
+Valor rotado 4 veces (a la IZQUIERDA):
+1111 1111 - 1111 1111 - 1111 1111 - 1111 1111 - 1111 1111 - 1111 1111 - 1111 1111 - 1111 0111
+
+Valor == 255:
+0000 0000 - 0000 0000 - 0000 0000 - 0000 0000 - 0000 0000 - 0000 0000 - 0000 0000 - 1111 1111 
+Valor rotado -4 veces (a la DERECHA):
+1111 0000 - 0000 0000 - 0000 0000 - 0000 0000 - 0000 0000 - 0000 0000 - 0000 0000 - 0000 1111 
+
+
+
+TESTING EXTRACT_BITS_SEGMENT32:
+
+Valor == 247:
+0000 0000 - 0000 0000 - 0000 0000 - 1111 0111
+Segmento extraido (del bit 0 al bit 5):
+0000 0000 - 0000 0000 - 0000 0000 - 0011 0111
+
+TESTING EXTRACT_BITS_SEGMENT64:
+
+Valor == 247:
+0000 0000 - 0000 0000 - 0000 0000 - 0000 0000 - 0000 0000 - 0000 0000 - 0000 0000 - 1111 0111
+Segmento extraido (del bit 0 al bit 5):
+0000 0000 - 0000 0000 - 0000 0000 - 0000 0000 - 0000 0000 - 0000 0000 - 0000 0000 - 0011 0111
+
+FIN DEL PROGRAMA
+PS C:\Users\MAURO\Documents\BinaryOperations>
