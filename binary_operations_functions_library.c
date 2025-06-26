@@ -336,7 +336,7 @@ uint64_t carry_rotate64(uint64_t data, int N)
 * @param value Valor original.
 * @param startBit Posición inicial (0-31).
 * @param endBit Posición final (0-31).
-* @return Segmento de bits extraído. Si las posiciones son inválidas, retorna 0.
+* @return Segmento de bits extraído. Si las posiciones son inválidas, retorna el valor original.
 */
 uint32_t extract_bits_segment32(uint32_t value, uint8_t startBit, uint8_t endBit) 
 {
@@ -370,7 +370,7 @@ uint32_t extract_bits_segment32(uint32_t value, uint8_t startBit, uint8_t endBit
 * @param value Valor original.
 * @param startBit Posición inicial (0-63).
 * @param endBit Posición final (0-63).
-* @return Segmento de bits extraído. Si las posiciones son inválidas, retorna 0.
+* @return Segmento de bits extraído. Si las posiciones son inválidas, retorna el valor original.
 */
 uint64_t extract_bits_segment64(uint64_t value, uint8_t startBit, uint8_t endBit) 
 {
